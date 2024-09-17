@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 2px;
   }
@@ -20,7 +23,7 @@ nav ul li {
 nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     display: block;
     transition: color 0.3s;
@@ -188,4 +191,64 @@ nav ul li:hover .dropdown-content{
 }
 .footer-bottom p{
     margin: 0;
+}
+
+/*Login*/
+.login-button, .back-button {
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    justify-items: center;
+}
+
+.login-button:hover, .back-button:hover {
+    background-color: #218838;
+}
+
+.login-container, .signup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #07ac51;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #022245;
 }

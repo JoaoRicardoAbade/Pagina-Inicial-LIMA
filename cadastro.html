@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PointSport</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+        <nav id="home">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Quadras</a></li>
+                <li class="dropdown"><a href="index.html" class="dropbtn">Sobre nós</a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Contato</a>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navsecundaria">
+            <p></p>
+        </nav>
+        </header>
+    <!--Titulo-->
+        <h1><center>PointSport</center></h1>
+    <div class="login-container">
+        <center><a href="index.html"><img src="favicon.ico" alt="" width="15%"></a></center>
+        <h2>Cadastro</h2>
+        <form action="cadastro.html" method="post">
+            <!--Campo nome usuario-->
+            <label for="username">Nome de Usuario ou E-Mail:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="username">CPF:</label>
+            <input type="text" id="username" name="username" required>
+
+            <!--Campo Senha-->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <!--Botão de envio-->
+            <button type="submit">Entrar</button>
+
+            <!--Link para page de cadastro-->
+            <p>Já tem uma conta? <a href="login.html">Entre</a></p>
+        </form>
+    </div>
+</body>
