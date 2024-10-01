@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PointSport</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <header>
+            <nav id="home">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Quadras</a></li>
+                    <li class="dropdown"><a href="index.html" class="dropbtn">Sobre nós</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html">Contato</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="cadastro.html"><button class="btn-login">Cadastre-se</button></a></li>
+
+                </ul>
+            </nav>
+            <nav class="navsecundaria">
+                <p></p>
+            </nav>
+            </header>
+            <!--Titulo-->
+            <h1><center>PointSport</center></h1>
+            <!--Seção de produto-->
+
+            <section class="produto">
+                <!--Div com imagens do produto-->
+                <div class="imagens-produto">
+                    <!--Imagens do produto-->
+                    <img src="https://www.newquadras.com.br/images/Projetos/Fotos/IMG-20230427-WA0013.jpg" alt="Produto Principal" class="imagem-principal" id="imagem-principal">
+                    <!--Miniatura das imagens-->
+                    <div class="miniaturas">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUEOiPRRN-L-ENBUKy5jRBeOPNzgpSqXN2w&s" alt="Miniatura 1" class="miniatura"  imagem-data="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUEOiPRRN-L-ENBUKy5jRBeOPNzgpSqXN2w&s">
+                        <img src="https://www.dicaseducacaofisica.info/wp-content/uploads/2017/02/quadra-de-futsal.webp" alt="Miniatura 2" class="miniatura"  imagem-data="https://www.dicaseducacaofisica.info/wp-content/uploads/2017/02/quadra-de-futsal.webp">
+                        <img src="https://www.newquadras.com.br/images/Projetos/Fotos/IMG-20230427-WA0013.jpg" alt="Miniatura 3" class="miniatura"  imagem-data="https://www.newquadras.com.br/images/Projetos/Fotos/IMG-20230427-WA0013.jpg">
+                    </div>
+                </div>
+                <!--Div que contém os detalhes do produto -->
+                <div class="detalhes-produto">
+                    <!--Nome do produto-->
+                    <h2>Quadra de Futsal</h2>
+                    <!--Descrição Produto-->
+                    <p class="descricao">Quadra de futsal de otima qualidade na região do bairro Barão Geraldo em Campinas-SP para mais informações <a href="https://www.messenger.com/?locale=pt_BR">contate</a></p>
+                    <!--Preço do produto-->
+                    <p class="preco">R$ 120,00 a hora </p>
+                    <!--Formulário para selecionar tamanho e cor do produto-->
+                    <form class="opcoes-compra">
+                        <!--Seleção de horario-->
+                        <label for="horario">Horários disponíveis:</label>
+                        <select id="horario">
+                            <option>19:00</option>
+                            <option>14:00</option>
+                            <option>17:00</option>
+                            <option>21:00</option>
+                        </select>
+                        <!--Seleção de Reserva da área de churrasco-->
+                        <label for="churrasco">Reservar área de churrasco?</label>
+                        <select id="churrasco">
+                            <option>sim, 1 hora</option>
+                            <option>sim, 3 horas</option>
+                            <option>sim, 6 horas</option>
+                            <option>não,obrigado</option>
+                        </select>
+                        <!--Botão de alugar-->
+                        <button type="submit">Alugar</button>
+                    </form>
+                </div>
+            </section>
+            <!--Seção de comentarios dos clientes-->
+            <section class="comentarios">
+                <h3>Comentários dos clientes</h3>
+
+                <!--Comentário 1-->
+                <div class="comentario">
+                    <!--Foto do usuario-->
+                    <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/2024-09-10T214653Z_1_LOP311410092024RP1_RTRMADP_BASEIMAGE-960X540_PEOPLE-SEAN-COMBS.jpg?w=420&h=240&crop=1&quality=85" alt="Foto do Sean" class="foto-usuario">
+                    <!--Nome e depoimento do usuario-->
+                    <p><strong>Sean:</strong>Incrível a qualidade, banheiros e bebedouros limpos e funcionais</p>
+                </div>
+                <!--Comentario 2-->
+                <div class="comentario">
+                    <!--Foto do usuario-->
+                    <img src="https://media.gazetadopovo.com.br/2019/06/04143325/jay-z-660x372.jpg" alt="Foto do Carter" class="foto-usuario">
+                    <!--Nome e depoimento do usuario-->
+                    <p><strong>Carter:</strong>Localização perfeita e preço acessível para uma ótima partida com seus amigos</p>
+                </div>
+            </section>
+            <!-- Rodapé -->
+            <center>
+            <footer id="Contato">
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#Membros">Membros</a></li>
+                        <li><a href="#Sobre">Sobre</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <!-- Informações de contato -->
+        <p>point.sport@esportestn.com</p>
+        <p>Telefone: (11) 19 4321 8765</p>
+        <p>Endereço: Rua Incrivel, 243 Jardim das Flores Sumaré-SP</p>
+
+        <!-- Seção de redes sociais -->
+        <div class="footer-section">
+        <h4>Siga-nos</h4>
+        <div class="social-links">
+            <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </div>
+        </div>
+
+        <!-- Rodapé inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Empresa. Todos direitos reservados</p>
+        </div>
+
+        </footer>
+        </center>
+
+        <!-- Informação do desenvolvedor -->
+        <p class="eu">Desenvolvido por: João Ricardo Beserra Abade</p>
+        <script src="script.js"></script>
+    </body>
+</html>
