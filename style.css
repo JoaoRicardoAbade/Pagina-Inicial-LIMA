@@ -54,31 +54,40 @@ nav ul li:hover .dropdown-content{
     display: block;
 }
   /*Slider*/
-.slider{
+  .slider {
+    position: relative;
     width: 100%;
+    overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
-    position: relative;
 }
-.slides{
+
+.slides {
     display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%; /* Número de slides x 100% */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
     width: 100%;
-    animation: slideAnimation 30s infinite;
-}
-.slide{
-    width: 100%;
-    flex-shrink: 0;
-}
-@keyframes slideAnimation{
-    0%{transform: translateX(0);}
-    33%{transform: translateX(-100%);}
-    66%{transform: translateX(-200%);}
-    100%{transform: translateX(0);}
-}
-.slide img{
-    width: 50%;
     display: block;
+}
+
+/* Animação do slider */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+.slides {
+    animation: slideAnimation 18s infinite;
 }
 /*FlexBox*/
 .container{
@@ -105,7 +114,7 @@ nav ul li:hover .dropdown-content{
     display: block;
 }
 /*Quadras*/
-  .Oficina img{
+  .Quadras img{
     size: 10%;
     margin: 20px;
     width:200px ;
@@ -504,6 +513,12 @@ button.remover-produto:hover{
 .total-final h3{
     color: #ddd;
 }
-#total-final{
-    color: rgb(25, 0, 255);
-}
+/*Imagem Sobre nós*/
+/*Quadras*/
+.sobreimg img{
+    size: 10%;
+    margin: 20px;
+    width:200px ;
+    height:200px ;
+    border-radius: 360px;
+  }
