@@ -1,9 +1,6 @@
 *{
     box-sizing: border-box;
 }
-body{
-    margin: 2px;
-  }
   /*menu com dropdowns*/
   nav{
     background-color: rgb(0, 78, 16);
@@ -522,3 +519,8 @@ button.remover-produto:hover{
     height:200px ;
     border-radius: 360px;
   }
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  margin: 2px;
+}

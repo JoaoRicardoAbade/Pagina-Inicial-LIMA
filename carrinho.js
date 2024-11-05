@@ -1,37 +1,26 @@
-// Função para atualizar o preço total de cada produto baseado na quantidade
+// Função para atualizar o preço total de cada produto baseado na quantidade (horário)
 function atualizarPrecoTotal(produtoLinha) {
-    const quantidade = produtoLinha.querySelector('.quantidade').value;
-    const precoUnitario = parseFloat(produtoLinha.querySelector('.preco-unitario').innerText.replace('R$', '').replace(',', '.'));
-    const precoTotal = quantidade * precoUnitario;
+    const horario = produtoLinha.querySelector('.horario').value;
+    const precoUnitario = parseFloat(produtoLinha.querySelector('.preco-unitario').innerText.replace('R$', '').replace(',', '.').replace('OO', '00'));
+    const precoTotal = horario * precoUnitario;
 
     // Atualiza o valor total do produto na linha
     produtoLinha.querySelector('.preco-total').innerText = `R$ ${precoTotal.toFixed(2).replace('.', ',')}`;
 }
 
-// Função para calcular o total final do carrinho
+// Função para calcular o total final do carrinho baseado nos itens restantes
 function calcularTotalFinal() {
     let totalFinal = 0;
-    const produtos = document.querySelectorAll('tbody tr');
+    const produtosRestantes = document.querySelectorAll('tbody tr');
 
-    produtos.forEach(produtoLinha => {
-        const precoTotal = parseFloat(produtoLinha.querySelector('.preco-total').innerText.replace('R$', '').replace(',', '.'));
-        totalFinal += precoTotal;
+    produtosRestantes.forEach(produtoLinha => {
+        const precoUnitario = parseFloat(produtoLinha.querySelector('.preco-unitario').innerText.replace('R$', '').replace(',', '.').replace('OO', '00'));
+        totalFinal += precoUnitario;
     });
 
     // Atualiza o valor total final no HTML
     document.getElementById('total-final').innerText = `R$ ${totalFinal.toFixed(2).replace('.', ',')}`;
 }
-
-// Adiciona eventos para alterar a quantidade e recalcular o total
-const quantidades = document.querySelectorAll('.quantidade');
-
-quantidades.forEach(quantidade => {
-    quantidade.addEventListener('input', function() {
-        const produtoLinha = this.closest('tr'); // Seleciona a linha correspondente
-        atualizarPrecoTotal(produtoLinha); // Atualiza o total do produto
-        calcularTotalFinal(); // Recalcula o total final
-    });
-});
 
 // Função para remover um produto do carrinho
 function removerProduto(produtoLinha) {
@@ -40,14 +29,14 @@ function removerProduto(produtoLinha) {
 }
 
 // Adiciona eventos para remover produtos
-const removerBotoes = document.querySelectorAll('.remover-produto');
+const botoesRemoverProduto = document.querySelectorAll('.remover-produto');
 
-removerBotoes.forEach(botao => {
+botoesRemoverProduto.forEach(botao => {
     botao.addEventListener('click', function() {
         const produtoLinha = this.closest('tr'); // Seleciona a linha correspondente
         removerProduto(produtoLinha); // Remove o produto
     });
 });
 
-// Calcula o total inicial na página carregada
+// Calcula o total inicial ao carregar a página
 calcularTotalFinal();
